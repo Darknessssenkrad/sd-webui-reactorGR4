@@ -11,7 +11,9 @@ from modules import shared
 # SAVE_ORIGINAL: bool = False
 
 def update_fm_list(selected: str):
-    return gr.Dropdown(value=selected, choices=get_model_names(get_facemodels))
+    return gr.Dropdown(
+        value=selected, choices=get_model_names(get_facemodels)
+    )
 
 # TAB MAIN
 def show(is_img2img: bool, show_br: bool = True, **msgs):
